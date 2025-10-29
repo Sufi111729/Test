@@ -1,0 +1,312 @@
+    /* Basic Reset */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    /* Container */
+    
+    .container {
+        width: 100%;
+        max-width: 462px;
+        height: 603px;
+        background: white;
+        border-radius: 8px;
+        padding: 24px 16px;
+    }
+    /* Heading */
+    
+    .heading {
+        width: 343px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+        margin: 25px auto;
+        position: relative;
+        background: #fff;
+    }
+    
+    .heading h1 {
+        color: #FF6B82;
+        font-size: 20px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    
+    .line {
+        flex: 5;
+        height: 1px;
+        background: #d0d0d0;
+    }
+    /* Card */
+    
+    .card {
+        width: 341px;
+        border: 2px solid #e0e0e0;
+        padding: 14px;
+        margin: 20px auto;
+        position: relative;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+    /* Active card — same height, only color change */
+    
+    .card.active {
+        border-color: #FF6B82;
+        background: #FFF9FA;
+    }
+    /* Card Header layout */
+    
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* Left & Right section */
+    
+    .left,
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    /* Radio Button */
+    
+    .radio {
+        width: 16px;
+        height: 16px;
+        border: 2px solid #d0d0d0;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+    }
+    
+    .card.active .radio {
+        border-color: #FF6B82;
+    }
+    
+    .card.active .radio::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #FF6B82;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* Hide real radio input */
+    
+    .card input[type="radio"] {
+        display: none;
+    }
+    /* Label clickable */
+    
+    .card label {
+        cursor: pointer;
+        display: block;
+    }
+    /* Unit Text */
+    
+    .unit {
+        font-weight: 600;
+        font-size: 14px;
+        color: #1a1a1a;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+        color: #808080;
+    }
+    /* Badge */
+    
+    .badge {
+        background: #FF6B82;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    /* Prices */
+    
+    .prices {
+        text-align: right;
+    }
+    
+    .price {
+        font-weight: 500;
+        font-size: 14px;
+        color: #1a1a1a;
+    }
+    
+    .old-price {
+        font-size: 11px;
+        color: #a0a0a0;
+        text-decoration: line-through;
+    }
+    /* Ribbon */
+    
+    .ribbon {
+        position: absolute;
+        top: -10px;
+        right: 3px;
+        background: #FF6B82;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 6px 18px;
+        border-radius: 0 0 4px 4px;
+        display: inline-block;
+        z-index: 2;
+    }
+    /* Small side triangles (like in your screenshot) */
+    
+    .ribbon::before,
+    .ribbon::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border-style: solid;
+        border-width: 10px 5px 0px 0px;
+        border-color: transparent #C8566D transparent transparent;
+    }
+    
+    .ribbon::before {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    
+    .ribbon::after {
+        right: 0;
+        transform: rotateY(180deg) translateX(-100%);
+    }
+    /* Variants */
+    
+    .variants {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #f0f0f0;
+    }
+    
+    .variant-labels {
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-size: 11px;
+        color: #808080;
+    }
+    
+    .variant-labels span:first-child {
+        opacity: 0;
+    }
+    
+    .variant-row {
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 8px;
+        align-items: center;
+    }
+    
+    .variant-row span {
+        font-size: 11px;
+        color: #808080;
+        text-align: center;
+    }
+    
+    .variant-row select {
+        padding: 6px 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 3px;
+        font-size: 12px;
+        background: white;
+    }
+    /* Footer */
+    
+    .footer {
+        width: 343px;
+        margin: 10px auto 10px;
+        /* Centers the footer box horizontally */
+        display: flex;
+        justify-content: space-between;
+        /* Keeps "Free Delivery" left & "Total" right */
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        box-sizing: border-box;
+    }
+    
+    .delivery {
+        width: 89px;
+        position: relative;
+        color: #FF6B82;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    
+    .total {
+        width: 124px;
+        position: relative;
+        font-size: 13px;
+        color: #1a1a1a;
+    }
+    /* Button */
+    
+    .btn {
+        position: absolute;
+        /* card ke bottom se distance */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 342px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: #FF6B82;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background: #e85a6f;
+    }
+    
+    .btn span {
+        font-size: 18px;
+    }
+    /* Powered by */
+    
+    .powered {
+        width: 343px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        margin-top: 58px;
+        font-size: 12px;
+        left: 40px;
+        color: #999;
+        font-style: italic;
+    }

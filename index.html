@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAY! It's BOGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Heading -->
+        <div class="heading">
+            <span class="line"></span>
+            <h1>YAY! It's BOGO</h1>
+            <span class="line"></span>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="card" data-price="10">
+            <input type="radio" name="plan" id="plan1" checked>
+            <label for="plan1">
+        <div class="card-header">
+          <div class="left">
+            <span class="radio"></span>
+            <div>
+              <div class="unit">1 Unit</div>
+              <div class="subtitle">Standard Price</div>
+            </div>
+          </div>
+          <div class="right">
+            <span class="badge">10% Off</span>
+            <div class="prices">
+              <div class="price">$10.00 USD</div>
+              <div class="old-price">$24.00 USD</div>
+            </div>
+          </div>
+        </div>
+      </label>
+        </div>
+
+        <!-- Card 2 - Most Popular -->
+        <div class="card popular active" data-price="18">
+            <span class="ribbon">MOST POPULAR</span>
+            <input type="radio" name="plan" id="plan2">
+            <label for="plan2">
+        <div class="card-header">
+          <div class="left">
+            <span class="radio"></span>
+            <div class="unit">2 Unit</div>
+          </div>
+          <div class="right">
+            <span class="badge">20% Off</span>
+            <div class="prices">
+              <div class="price">$18.00 USD</div>
+              <div class="old-price">$24.00 USD</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Variants -->
+        <div class="variants">
+          <div class="variant-labels">
+            <span>Size</span>
+            <span>Colour</span>
+          </div>
+          <div class="variant-row">
+            <span>#1</span>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+            <select>
+              <option>Black</option>
+              <option>Blue</option>
+              <option>Red</option>
+            </select>
+          </div>
+          <div class="variant-row">
+            <span>#2</span>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+            <select>
+              <option>Colour</option>
+              <option>Black</option>
+              <option>Blue</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+      </label>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-price="24">
+            <input type="radio" name="plan" id="plan3">
+            <label for="plan3">
+        <div class="card-header">
+          <div class="left">
+            <span class="radio"></span>
+            <div class="unit">3 Unit</div>
+          </div>
+          <div class="right">
+            <span class="badge">30% Off</span>
+            <div class="prices">
+              <div class="price">$24.00 USD</div>
+              <div class="old-price">$24.00 USD</div>
+            </div>
+          </div>
+        </div>
+      </label>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="delivery">Free Delivery</div>
+            <div class="total">Total : $18.00 USD</div>
+        </div>
+
+        <!-- Button -->
+        <button class="btn">
+      <span>+</span> Add to Cart
+    </button>
+
+        <!-- Powered by -->
+        <div class="powered">@ Powered by Pumper</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
